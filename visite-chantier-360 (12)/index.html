@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Visite Chantier 360</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="description" content="Relevé de visites de chantier en vues 360° datées, avec cotation dans la panoramique.">
+<meta name="theme-color" content="#0e1014">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Visite 360">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icone-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icone-192.png">
+<link rel="stylesheet" href="css/app.css?v=16">
+</head>
+<body>
+<div id="app" style="display:flex;flex-direction:column;height:100%;overflow:hidden">
+  <div class="corps">
+    <div class="vide">
+      <div class="ico">🏗</div>
+      <p><strong>Visite Chantier 360</strong></p>
+      <p>Chargement de l'application…</p>
+    </div>
+  </div>
+</div>
+
+<noscript>
+  <div style="padding:24px;color:#eef1f5;font-family:system-ui">
+    <h1 style="font-size:19px">Visite Chantier 360</h1>
+    <p>Cette application a besoin de JavaScript pour fonctionner.</p>
+  </div>
+</noscript>
+
+<script type="module" src="js/app.js?v=16"></script>
+<script>
+// Repli si les modules ES ne sont pas pris en charge (navigateur très ancien)
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    var a = document.getElementById('app');
+    if (a && a.textContent.indexOf('Chargement') !== -1) {
+      a.innerHTML = '<div class="corps"><div class="note alerte">' +
+        "<strong>L'application n'a pas pu démarrer.</strong><br>" +
+        'Ce navigateur ne prend probablement pas en charge les modules JavaScript. ' +
+        'Utilisez Safari (iOS 14+) ou Chrome (Android récent).</div></div>';
+    }
+  }, 4000);
+});
+</script>
+</body>
+</html>

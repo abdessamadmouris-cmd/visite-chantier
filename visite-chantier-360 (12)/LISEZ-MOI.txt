@@ -1,0 +1,358 @@
+================================================================
+VISITE CHANTIER 360 — installation sur iPhone et Android
+================================================================
+
+Ce dossier EST l'application. Il n'y a rien à compiler.
+Pour qu'elle marche sur téléphone avec la caméra, le gyroscope et
+le mode hors-ligne, elle doit être servie en HTTPS depuis une
+adresse web. Ouvrir le fichier index.html directement depuis le
+téléphone ne suffit pas : les navigateurs bloquent la caméra en
+dehors d'une connexion sécurisée.
+
+
+----------------------------------------------------------------
+VERSION 16 — NETTETE, COMPLEXES DE TOITURE, SONDAGES
+- Photos floues / fantômes (coureur, capot) : mon réglage v15 était faux, il moyennait les
+  photos. Désormais UNE SEULE photo par point (plus de doublon translucide), assemblée en
+  5632 x 2816 si le téléphone l'accepte (sinon 4096), photos prises en 2400 px.
+  Limite : un objet qui bouge, ou très proche, peut être coupé net à la jonction de deux photos.
+  Pour une vue la plus propre : mode Fine, téléphone immobile, pivoter autour de soi.
+- Nouvel onglet TOITURE dans chaque visite :
+  * Complexes : support (dalle béton, bac acier, ossature bois...), forme de pente, ancienne
+    étanchéité, pare-vapeur, isolant, étanchéité (bicouche, monocouche, PVC...), protection
+    (gravillons, dalle sur plots, autoprotection...), épaisseur de chaque couche, coupe dessinée.
+  * Sondages : numéro, complexe constaté, date, photo, isolant humide, observations,
+    vue 360° proche. Outil 🕳 Sondage sur la Carte et le Plan : touchez l'endroit, le repère
+    rouge S1, S2... reste en place (déplaçable).
+  * Complexes et sondages sont dans le rapport et dans l'export du chantier.
+- Correction : les cartes du rapport avaient un fond clair illisible.
+
+VERSION 15 — FIN DES DOUBLONS (frigo, balai, lampe vus deux fois)
+----------------------------------------------------------------
+
+  Cause : un objet proche ne se voit pas au même endroit selon que
+  la photo est prise un peu à gauche ou un peu à droite (parallaxe).
+  Le mélange des photos en superposait alors deux versions.
+  Maintenant chaque point de l'image vient d'UNE seule photo, la
+  mieux centrée : plus de doublon. Un objet peut être légèrement
+  coupé à un raccord, mais il n'apparaît plus deux fois.
+
+  Pour limiter encore les raccords : tournez le téléphone SUR
+  LUI-MEME, coudes près du corps, sans tendre les bras ; plus on
+  tourne autour de soi, plus les objets proches se décalent.
+
+----------------------------------------------------------------
+NOUVEAUTE VERSION 14 — COTE DE REFERENCE (acrotère mesuré sur place)
+----------------------------------------------------------------
+
+  Sur la toiture : mesurez un acrotère (ou un regard, une dalle) au
+  mètre. Dans l'appli, vous donnez cette cote et tout le reste des
+  mesures s'en déduit.
+
+  Dans une PHOTO de parcours :
+    📐 Échelle > toucher le pied puis le sommet de l'acrotère >
+    saisir sa hauteur réelle > donner un nom (« acrotère nord ») pour
+    la garder. Les autres cotes de la photo sont alors justes.
+    Dans les photos suivantes, la référence est proposée en un
+    appui : il reste à toucher les deux bouts dans la photo.
+
+  Dans une vue 360° :
+    ⋯ > Caler la station > « Une hauteur connue » : viser le pied
+    puis le sommet de l'acrotère, saisir sa hauteur. L'appli corrige
+    la hauteur d'objectif : toute la station est calée d'un coup.
+
+  Noms de cotes proposés : Hauteur acrotère, Joint de dilatation,
+  Remontée d'eau, Relevé, Largeur.
+
+----------------------------------------------------------------
+NOUVEAUTE VERSION 13 — MODE « FINE » (plus de photos, image plus nette)
+----------------------------------------------------------------
+
+  - Dans l'écran de prise 360°, un 3e réglage « Fine · +photos » :
+    une cinquantaine de photos au lieu de 18 ou 26, avec plus de
+    recouvrement entre elles, et une image finale de 5632 x 2816
+    au lieu de 4096 x 2048 (environ 37 % de détail en plus).
+  - Prévoir 2 à 3 minutes de prise, en tournant lentement sur place,
+    puis un assemblage plus long.
+  - Si le téléphone ne tient pas la grande définition, l'application
+    refait seule l'assemblage en définition standard : rien n'est perdu.
+
+----------------------------------------------------------------
+NOUVEAUTE VERSION 12 — PARCOURS EN MARCHANT (toitures)
+----------------------------------------------------------------
+
+  - Bouton « 🚶 Parcours » (accueil, chantier ou visite) : la caméra
+    s'ouvre, les photos se prennent toutes seules pendant que vous
+    marchez, avec l'heure, la position GPS et la direction.
+    Choix du rythme en haut : toutes les 4 s, tous les 3 m, tous les
+    6 m (GPS), ou à la main. Chaque photo est gardée aussitôt.
+  - Sur une toiture le GPS n'est précis qu'à quelques mètres : le
+    rythme « toutes les 4 s » est le plus sûr. Ne regardez pas
+    l'écran en marchant.
+  - Au bureau : onglet « Carte » = votre trajet (ligne bleue) et les
+    photos numérotées avec leur direction. Toucher un numéro ouvre la
+    photo ; ◀ ▶ avancent dans le parcours ; la mini-carte montre où
+    vous étiez. Corrigez un repère mal placé avec 📍 Placer.
+  - MESURER dans une photo : 📐 Échelle (toucher les deux bouts d'une
+    longueur connue, par exemple un mètre pliant posé contre
+    l'acrotère, et la saisir), puis 📏 Mesurer (toucher les points :
+    hauteur d'acrotère, joint de dilatation, remontée d'eau…).
+    Donner un nom, la cote est gardée dans la photo.
+    La mesure n'est juste que dans le plan de la référence, vu à peu
+    près de face. Mettez toujours un mètre dans la photo.
+  - Pour une mesure plus fiable que la photo, faire une vue 360° au
+    point voulu : on y mesure au sol sans référence.
+
+----------------------------------------------------------------
+NOUVEAUTE VERSION 11 — SE BALADER ET MESURER SUR CARTE
+----------------------------------------------------------------
+
+BALADE (comme Street View / 4DKanKan)
+  - Dans une vue 360°, des flèches blanches au sol et des pastilles
+    en haut (« ▲ Station 2 · 13 m ») mènent à la station voisine.
+    On arrive en regardant dans le sens de la marche.
+  - Une mini-carte en bas à gauche montre où vous êtes et dans
+    quelle direction vous regardez. ⤢ l'agrandit. Toucher un numéro
+    de station sur la mini-carte y mène directement.
+  - Les flèches n'apparaissent que si les stations sont PLACEES
+    (voir ci-dessous).
+
+CARTE (onglet « Carte » d'une visite) — fonds de l'IGN
+  - Plan IGN ou photo aérienne, comme Géoportail. 🔎 cherche une
+    adresse, ◎ vous localise.
+  - 📍 Placer : choisir une station dans la liste puis toucher la
+    carte. Une station prise dehors est placée seule par le GPS
+    (case cochée à l'enregistrement).
+  - 📏 Distance (tracé en plusieurs points) et ⬠ Surface :
+    toucher les points, « Enregistrer » pour garder la mesure.
+  - Il faut du réseau pour afficher les fonds IGN. Les mesures et
+    les positions, elles, restent sur le téléphone.
+
+PLAN (onglet « Plan ») — pour l'intérieur
+  - Importer le plan (image, nord en haut), donner l'échelle UNE
+    fois (📐 : toucher deux points d'une longueur connue et la
+    saisir), puis mêmes outils distance et surface.
+  - Placer les stations sur le plan : la balade et la mini-carte
+    fonctionnent alors à l'intérieur aussi.
+
+ORIENTER UNE VUE (menu ⋯ > « Orienter sur la carte / le plan »)
+  - Les vues 360° ne connaissent pas le nord. Si une flèche ne
+    pointe pas dans la bonne direction : ouvrir ce menu, viser
+    avec le réticule une autre station, la choisir dans la liste,
+    valider. Une seule fois par station.
+
+Précision : la mesure sur carte vaut la précision de la photo
+aérienne et de vos clics (de l'ordre du mètre en extérieur). Les
+mesures dans la vue 360° (mur, acrotère) restent les plus fines.
+
+
+----------------------------------------------------------------
+ETAPE 1 — METTRE L'APPLICATION EN LIGNE (une seule fois, 30 s)
+----------------------------------------------------------------
+
+Sur un ordinateur :
+
+  1. Aller sur  https://app.netlify.com/drop
+  2. Glisser le fichier visite-chantier-360.zip dans la page
+     (ou le dossier décompressé en entier).
+  3. Netlify donne une adresse du type
+     https://nom-invente-1234.netlify.app
+  4. Dans Site configuration > Change site name, mettre par exemple
+     "visite360-abde" pour obtenir une adresse retenable.
+
+C'est le même principe que pour appels-offres.netlify.app.
+L'hébergement est gratuit et l'adresse reste privée tant que vous
+ne la communiquez pas.
+
+Pour mettre à jour plus tard : redéposer le dossier au même
+endroit, les données déjà enregistrées sur le téléphone ne sont
+pas touchées.
+
+
+----------------------------------------------------------------
+ETAPE 2 — INSTALLER SUR IPHONE
+----------------------------------------------------------------
+
+  1. Ouvrir l'adresse dans SAFARI (pas Chrome : sur iPhone seul
+     Safari sait installer une application web).
+  2. Bouton Partager (le carré avec la flèche vers le haut).
+  3. "Sur l'écran d'accueil", puis Ajouter.
+  4. Lancer l'application depuis l'icône créée.
+  5. A la première prise de vue, iOS demande l'accès à la caméra
+     puis au mouvement : accepter les deux.
+
+Si l'accès au mouvement n'est jamais demandé :
+Réglages > Apps > Safari > Avancé > Accès au mouvement et à
+l'orientation : activer.
+
+
+----------------------------------------------------------------
+ETAPE 3 — INSTALLER SUR ANDROID
+----------------------------------------------------------------
+
+  1. Ouvrir l'adresse dans Chrome.
+  2. Menu (trois points) > "Installer l'application"
+     (ou "Ajouter à l'écran d'accueil").
+  3. Lancer depuis l'icône créée.
+  4. Accepter la caméra à la première prise de vue.
+
+
+----------------------------------------------------------------
+METTRE A JOUR / SI LA CAMERA NE S'OUVRE PAS
+----------------------------------------------------------------
+
+Le numéro de version est affiché en bas de l'écran d'accueil.
+Cette version est la 16.
+
+LA MISE A JOUR EST AUTOMATIQUE. NE JAMAIS DESINSTALLER L'APPLI :
+sur iPhone, supprimer l'icône efface aussi toutes les visites,
+vues 360° et cotes qu'elle contient.
+
+Pour mettre à jour :
+  1. Sur Netlify, ouvrir le site existant, onglet Deploys, et
+     glisser le nouveau zip dans la zone de dépôt (même site, même
+     adresse).
+  2. Sur le téléphone, ouvrir l'application. Un bandeau orange
+     « Nouvelle version disponible » apparaît en haut : appuyer
+     sur « Mettre à jour ». Vos données restent intactes.
+  3. Vérifier le nouveau numéro en bas de l'accueil.
+
+Si le bandeau n'apparaît pas : fermer complètement l'application
+(balayer vers le haut depuis le bas de l'écran, puis faire glisser
+l'app vers le haut pour la fermer) et la rouvrir.
+
+Si la caméra ne s'ouvre toujours pas : Réglages de l'app (roue
+crantée en haut à droite) > "Tester la caméra". L'application
+affiche la cause exacte et ce qu'il faut faire. Les causes
+possibles :
+  - application ouverte depuis l'aperçu Claude et non depuis
+    l'adresse Netlify ;
+  - accès caméra refusé une première fois : iOS ne redemande
+    plus. Réglages > Apps > Safari > Caméra : « Autoriser », puis
+    fermer complètement l'application et la rouvrir ;
+  - caméra occupée par une autre application (appel, visio).
+
+
+----------------------------------------------------------------
+OU SONT LES DONNEES
+----------------------------------------------------------------
+
+Tout reste DANS LE TELEPHONE (base locale du navigateur). Rien
+n'est envoyé sur un serveur, rien ne transite par Netlify à part
+l'application elle-même. Conséquences :
+
+  - Les chantiers ne se synchronisent pas entre l'iPhone et
+    l'Android : chaque appareil a ses propres relevés.
+  - Pour passer un chantier d'un téléphone à l'autre, ou pour en
+    garder une sauvegarde : Chantier > Exporter > sauvegarde
+    complète, puis Importer sur l'autre appareil.
+  - EXPORTER REGULIEREMENT. Un navigateur peut purger ses données
+    s'il manque de place. L'application demande la persistance au
+    démarrage, mais ce n'est pas une garantie absolue.
+
+
+----------------------------------------------------------------
+PRENDRE UNE BONNE VUE 360
+----------------------------------------------------------------
+
+Deux entrées possibles, très inégales en qualité :
+
+  IMPORT D'UNE CAMERA 360 (Insta360, Ricoh Theta) — recommandé
+  dès que vous voulez coter. La sphère est complète, le sol est
+  visible, la géométrie est exacte sans réglage.
+
+  PRISE DE VUE DANS L'APPLICATION — vous tournez sur place, l'app
+  déclenche à chaque cible, puis elle MESURE l'angle de vue réel de
+  la caméra et RECALE chaque photo sur ses voisines en comparant
+  les images. Deux modes :
+    - Rapide (par défaut, 13 à 18 photos) : horizon, bas et sol.
+      Pas de ciel ni de plafond, inutiles sur une terrasse.
+    - Complète (18 à 26 photos) : toute la sphère.
+  Les photos sont ensuite fondues entre elles sur une bande étroite
+  (les raccords ne se voient plus, sans dédoubler les objets),
+  leurs écarts d'exposition sont corrigés d'après leurs zones
+  communes, et les petits oublis sont comblés par les couleurs
+  voisines, floutées, au lieu de rester noirs.
+  Sur un mur blanc uni ou dans le noir, il n'y a rien à comparer :
+  ces photos restent placées au gyroscope et les raccords se voient.
+
+Dans les deux cas :
+  - Faire pivoter LE TELEPHONE SUR LUI-MEME, au même point de
+    l'espace : c'est vous qui tournez autour du téléphone, pas le
+    téléphone autour de vous. A bout de bras, les objets proches
+    (portant, poteau, garde-corps) apparaissent dédoublés, et aucun
+    logiciel ne peut le rattraper. Un petit trépied ou un monopode
+    règle le problème.
+  - S'ARRETER UNE DEMI-SECONDE SUR CHAQUE CIBLE. La photo ne part
+    que lorsque le téléphone est immobile (l'écran affiche « ne
+    bougez plus… » tant que ce n'est pas le cas). C'est ce qui
+    supprime le flou de bougé.
+  - Bonne lumière : en intérieur sombre, l'iPhone allonge son
+    temps de pose et la moindre secousse floute l'image.
+  - Ne pas oublier la cible du bas (le sol sous vos pieds) :
+    sans le sol visible, aucune cotation n'est possible.
+  - Noter la hauteur à laquelle vous tenez le téléphone. C'est la
+    donnée dont dépendent toutes les cotes.
+
+
+----------------------------------------------------------------
+COTER JUSTE
+----------------------------------------------------------------
+
+Les cotes sont obtenues par géométrie : la panoramique donne la
+direction exacte de chaque point, et la hauteur d'objectif donne
+l'échelle. Un centimètre d'erreur sur cette hauteur fait environ
+0,6 % d'erreur sur les distances.
+
+Le réflexe qui change tout : CALER LA STATION. Mesurez au mètre
+une longueur connue au sol (une dalle, une largeur de porte, une
+règle de maçon posée au sol), puis Mesurer > Caler la station et
+saisissez la cote vraie. L'application en déduit la hauteur
+d'objectif exacte et toute la panoramique devient juste d'un coup.
+
+Ce que l'application affiche pour chaque cote :
+  - l'incertitude estimée (± quelques centimètres) ;
+  - la qualité de la visée. Plus un point est loin par rapport à
+    la hauteur d'objectif, plus la visée est rasante et la cote
+    douteuse. Au-delà d'un rapport de 10, elle est annoncée comme
+    non exploitable — et c'est à prendre au sérieux.
+
+Ces cotes valent pour le constat, le prédimensionnement et le
+chiffrage. Pour un métré contractuel ou une commande de
+matériaux, recoupez au mètre ou au laser.
+
+
+----------------------------------------------------------------
+SUIVRE UN CHANTIER DANS LE TEMPS
+----------------------------------------------------------------
+
+Chantier > Visite datée > Stations.
+
+A chaque passage, créez une nouvelle visite et refaites les mêmes
+stations EN GARDANT EXACTEMENT LE MEME NOM. L'application apparie
+les stations par leur nom : le comparateur superpose alors les
+deux dates avec une poignée à faire glisser, et liste les
+observations apparues, celles qui ont disparu et les cotes qui
+ont bougé.
+
+C'est là que l'outil prend sa valeur : une infiltration constatée
+en novembre, la même vue en février, horodatées toutes les deux.
+
+
+----------------------------------------------------------------
+CONTENU DU DOSSIER
+----------------------------------------------------------------
+
+  index.html              coque de l'application
+  manifest.webmanifest    déclaration d'installation
+  sw.js                   cache hors-ligne
+  css/app.css             interface
+  js/app.js               écrans, navigation, rapports
+  js/db.js                stockage local
+  js/geo.js               géométrie de mesure (le coeur du calcul)
+  js/viewer.js            visionneuse 360 WebGL
+  js/capture.js           prise de vue et normalisation des panos
+  icons/                  icônes d'installation
+
+Tout est lisible et modifiable : aucun framework, aucune
+dépendance extérieure, aucun compte à créer.
